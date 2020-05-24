@@ -21,7 +21,6 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-nnoremap <silent> <Space> :nohl<Bar>:echo<CR>
 
 "Keep more content at the bottom of the buffer
 set scrolloff=3
@@ -45,14 +44,8 @@ set directory=~/.vim/vim_backups//
 set viewdir=~/.vim/vim_backups//
 
 set showcmd
-
 set hidden
-
 set history=1000
-
-"Better ESC
-imap <C-F> <ESC>
-imap <C-c> <ESC>
 
 "mappings
 map <C-n> :NERDTreeToggle<CR>
@@ -61,6 +54,11 @@ map <S-Enter> O<ESC>
 map <C-p> "+p
 map <C-y> "+y
 map <C-a> <esc>ggVG
+map <silent> <F2> <Esc> :write!<CR>
+nnoremap <silent> <Space> :nohl<Bar>:echo<CR>
+
+"Better ESC
+imap <C-c> <ESC>
 
 "256 colors for terminal vim
 set t_Co=256
