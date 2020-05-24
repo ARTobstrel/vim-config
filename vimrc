@@ -1,10 +1,8 @@
 set nocompatible
-
 let mapleader = ','
 set number
 set ruler
 syntax on
-
 set laststatus=2
 set noshowmode
 
@@ -41,9 +39,10 @@ set backspace=indent,eol,start
 filetype plugin indent on
 
 "Directories for swp files
-set backupdir=~/dotvim/vim_backups//
-set directory=~/dotvim/vim_backups//
-set viewdir=~/dotvim/vim_backups//
+set backup
+set backupdir=~/.vim/vim_backups//
+set directory=~/.vim/vim_backups//
+set viewdir=~/.vim/vim_backups//
 
 set showcmd
 
@@ -57,10 +56,14 @@ imap <C-c> <ESC>
 
 "mappings
 map <C-n> :NERDTreeToggle<CR>
+map <Enter> o<ESC>
+map <S-Enter> O<ESC>
+map <C-p> "+p
+map <C-y> "+y
+map <C-a> <esc>ggVG
 
 "256 colors for terminal vim
 set t_Co=256
-
 
 call plug#begin('~/.vim/plugged')
 Plug 'Rip-Rip/clang_complete', {'for': ['c', 'cpp']}
@@ -69,6 +72,9 @@ Plug 'Rip-Rip/clang_complete', {'for': ['c', 'cpp']}
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 Plug 'Valloric/YouCompleteMe'
+
+" https://github.com/itchyny/lightline.vim
+Plug 'itchyny/lightline.vim'
 
 " Initialize plugin system
 call plug#end()
