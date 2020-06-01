@@ -1,0 +1,57 @@
+set nocompatible
+let mapleader = ','
+set number
+set ruler
+syntax on
+set laststatus=2
+set noshowmode
+
+"Default Whitespace
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+"Wrapping text by default
+set wrap
+set linebreak
+
+"Searching and highlights
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+"Keep more content at the bottom of the buffer
+set scrolloff=3
+
+"Highlight cursor line
+"set cursorline
+
+"Tab completion
+set wildmenu
+set wildmode=list:longest,list:full
+set wildignore+=*.o,*.obj,.git,*.rbc,assets/*,.idea/*
+
+set backspace=indent,eol,start
+
+set showcmd
+set hidden
+set history=1000
+
+"mappings
+map <Enter> o<ESC>
+map <C-p> "+p
+map <C-y> "+y
+map <C-a> <esc>ggVG
+nnoremap <silent> <Space> :nohl<Bar>:echo<CR>
+nnoremap "" bi"<esc>wwi"<esc>
+nnoremap '' bi'<esc>wwi'<esc>
+
+"Better ESC
+imap <C-c> <ESC>
+
+"256 colors for terminal vim
+set t_Co=256
+
+let MRU_Max_Entries = 100
